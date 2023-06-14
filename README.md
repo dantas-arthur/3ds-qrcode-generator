@@ -1,4 +1,4 @@
-<h1 align='center'>3ds-qrcode-generator</h1>
+<h1 align='center'>3DS QR Code Generator</h1>
 <p align='center'>Um simples gerador de códigos QR para instalar jogos no FBI</p>
 
  <div align="center">
