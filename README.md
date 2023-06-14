@@ -15,7 +15,7 @@ O propósito deste repositório é facilitar um pouco o processo de instalação
 Antes de iniciarmos, clone o repositório para ter acesso local de todos os arquivos necessários, você pode fazer isso utilizando o seguinte comando:
 
 ```
-git clone https://github.com/LonelyALpHaz/3ds-qrcode-generator
+git clone https://github.com/LonelyALpHaz/3ds-qrcode-generator.git
 ```
 
 #### Gerando o QR code
