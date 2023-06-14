@@ -14,7 +14,9 @@ O propósito deste repositório é facilitar um pouco o processo de instalação
 ### Clonando o repositório
 Antes de iniciarmos, clone o repositório para ter acesso local de todos os arquivos necessários, você pode fazer isso utilizando o seguinte comando:
 
-`git clone https://github.com/LonelyALpHaz/3ds-qrcode-generator`
+```
+git clone https://github.com/LonelyALpHaz/3ds-qrcode-generator
+```
 
 #### Gerando o QR code
 1. Faça upload do jogo que você deseja instalar para o [Google Drive](https://www.google.com/intl/pt-br/drive/about.html), certifique-se de fazer o **dump** de jogos originais nesse processo e utilize **somente** jogos com o formato ```.cia```, caso contrário, o FBI não conseguirá instalar o jogo;
