@@ -11,7 +11,7 @@ O propósito deste repositório é facilitar um pouco o processo de instalação
 
 ## Como utilizar:
 
-### Clonando o repositório
+#### Clonando o repositório
 Antes de iniciarmos, clone o repositório para ter acesso local de todos os arquivos necessários, você pode fazer isso utilizando o seguinte comando:
 
 ```
