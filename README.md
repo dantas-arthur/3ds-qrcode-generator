@@ -7,7 +7,7 @@
 
 ## Propósito:
 
-O propósito deste repositório é facilitar um pouco o processo de instalação de jogos no Nintendo 3DS, pois como você já deve saber, quando instalamos um jogo movendo arquivos para o armazenamento interno do 3DS isso custa o dobro de memória interna (o espaço consumido pelo arquivo ```.cia``` e o espaço necessário para instalar o jogo) e mesmo que você selecione a opção de apagar o arquivo ```.cia``` no final da instalação, particularmente falando, é deveras incoveniente ter que apagar um arquivo que eu gostaria de manter guardado. Pensando nesses problemas, decidi criar um script simples que gera um código qr e a partir dele eu possa instalar um jogo de forma bem mais prática. "Mas por que utilizar o Google Drive?" Simplesmente para manter os arquivos seguros em um cloud service, assim eu também posso economizar a memória dos meus dispositivos.
+O propósito deste repositório é facilitar um pouco o processo de instalação de jogos no Nintendo 3DS, pois como você já deve saber, quando instalamos um jogo movendo arquivos para o armazenamento interno do 3DS isso custa o dobro de memória interna (o espaço consumido pelo arquivo ```.cia``` e o espaço necessário para instalar o jogo) e mesmo que você selecione a opção de apagar o arquivo ```.cia``` no final da instalação, particularmente falando, é deveras incoveniente ter que apagar um arquivo que eu gostaria de manter guardado. Pensando nesses problemas, decidi criar um script simples que gera um código QR e a partir dele eu possa instalar um jogo de forma bem mais prática. "Mas por que utilizar o Google Drive?" Simplesmente para manter os arquivos seguros em um cloud service, assim eu também posso economizar a memória dos meus dispositivos.
 
 ## Como utilizar:
 
