@@ -1,5 +1,5 @@
-# 3ds-qrcode-generator
- Um simples gerador de códigos QR para instalar jogos no FBI
+<h1>3ds-qrcode-generator</h1>
+<p>Um simples gerador de códigos QR para instalar jogos no FBI</p>
 
  <div align="center">
   <img src="./assets/icone-grande.png" alt="icone-grande">
