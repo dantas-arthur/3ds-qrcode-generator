@@ -2,7 +2,7 @@
  Um simples gerador de códigos QR para instalar jogos no FBI
 
  <div align="center">
-  <img src="https://github.com/LonelyALpHaz/3ds-qrcode-generator/assets/73240555/9f97ad0f-d2d5-40da-a648-e4b84aeae6fc" alt="icone-grande">
+  <img src="./assets/icone-grande.png" alt="icone-grande">
 </div>
 
 ## Propósito:
