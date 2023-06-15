@@ -7,33 +7,44 @@ import os
 import io
 
 def qr_generator():
-    # DELETING OLD QR CODES
 
-    old_files = glob.glob('*.png')
-    for filename in old_files:
-        os.unlink(filename)
+    # Removing Old QR
 
-    # URL FILE
+    label_qrcode.config(image='')
+    
+    # URL Check
+    
+    if txtinput.get() == '' or 'https://drive.google.com' not in txtinput.get():
+        label_qrcode.config(text='Use a valid URL!', fg='red')
 
-    url = txtinput.get()[32:-18]
-    final_url = f'https://docs.google.com/uc?export=download&id={url}'
+    else:
+        # DELETING OLD QR CODES
 
-    # MAKING A QR CODE:
+        old_files = glob.glob('*.png')
+        for filename in old_files:
+            os.unlink(filename)
 
-    qrcode_maker = pqr.create(f'{final_url}')
+        # URL FILE
 
-    with open('qrcode.png', 'w') as fstream:
+        url = txtinput.get()[32:-18]
+        final_url = f'https://docs.google.com/uc?export=download&id={url}'
+
+        # MAKING A QR CODE:
+
+        qrcode_maker = pqr.create(f'{final_url}')
+
+        with open('qrcode.png', 'w') as fstream:
+            qrcode_maker.png('qrcode.png', scale=5)
         qrcode_maker.png('qrcode.png', scale=5)
-    qrcode_maker.png('qrcode.png', scale=5)
-    buffer = io.BytesIO()
-    qrcode_maker.png(buffer)
+        buffer = io.BytesIO()
+        qrcode_maker.png(buffer)
 
-    # DISPLAYING QR CODE
+        # DISPLAYING QR CODE
 
-    qrc = ImageTk.PhotoImage(file='qrcode.png')
+        qrc = ImageTk.PhotoImage(file='qrcode.png')
 
-    label_qrcode.config(image=qrc)
-    label_qrcode.image = qrc
+        label_qrcode.config(image=qrc)
+        label_qrcode.image = qrc
 
 # TK Initiallizer
 
@@ -52,7 +63,7 @@ tk.Label(
     text='3DS QR Code Generator',
     bg='#0e6475',
     fg='white',
-    font=('Minion Pro Cond', 20),
+    font=('Microsoft Sans Serif', 20),
     pady=15
 ).pack()
 
@@ -74,7 +85,7 @@ qrcode_frame.pack()
 
 # QR Code Display Image
 
-label_qrcode = tk.Label(qrcode_frame, bg='#0e6475')
+label_qrcode = tk.Label(qrcode_frame, bg='#0e6475', font=('Default', 12))
 label_qrcode.pack()
 
 # Generate QR Button
