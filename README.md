@@ -24,7 +24,7 @@ git clone https://github.com/LonelyALpHaz/3ds-qrcode-generator.git
 3. Inicie o ```qr_code.py``` disponível neste repositório, insira o link copiado no campo "URL" e depois clique no botão "Gerar", aguarde alguns segundos e o código QR irá aparecer na interface do programa.
 
 #### Instalando o jogo no 3DS
-1. Abra o aplicativo FBI no seu Nintendo 3DS e na primeira tela selecione a opção ```Remote Install > Scan QR Code```;
+1. Abra o aplicativo FBI no seu Nintendo 3DS e na primeira tela selecione as opções ```Remote Install > Scan QR Code```;
 2. Aponte a câmera do seu 3DS para o código QR que foi gerado anteriormente e, na tela inferior, clique em "Yes" para permitir o download via QR code;
 3. Aguarde enquanto o jogo é instalado e, ao final do processo, clique em "OK" para finalizar a instalação;
 4. Ao voltar para a tela inicial do console, ele irá apresentar a clássica tela com o presente, basta abrí-lo e se divertir com o seu novo jogo.
