@@ -12,8 +12,17 @@
 </p>
 
 ## Screenshots:
-<div align="center"><img src="./screenshots/Screenshot_1.png" width="500px" height="700px"> <img src="./screenshots/Screenshot_2.png" width="500px" height="700px"></div>
-<div align="center"><img src="./screenshots/Screenshot_3.png" width="500px" height="700px"></div>
+<div align="center">
+  <div style="display: inline-block;">
+    <img src="./screenshots/Screenshot_1.png" width="500px" height="700px">
+  </div>
+  <div style="display: inline-block;">
+    <img src="./screenshots/Screenshot_2.png" width="500px" height="700px">
+  </div>
+</div>
+<div align="center">
+  <img src="./screenshots/Screenshot_3.png" width="500px" height="700px">
+</div>
 
 ## Purpose:
 
