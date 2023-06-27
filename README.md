@@ -12,8 +12,8 @@
 </p>
 
 ## Screenshots:
-<div align="center"><img src="./screenshots/Screenshot_1.png" width="300px" height="500px"> <img src="./screenshots/Screenshot_2.png" width="300px" height="500px"></div>
-<div align="center"><img src="./screenshots/Screenshot_3.png" width="300px" height="500px"></div>
+<div align="center"><img src="./screenshots/Screenshot_1.png" width="400px" height="600px"> <img src="./screenshots/Screenshot_2.png" width="400px" height="600px"></div>
+<div align="center"><img src="./screenshots/Screenshot_3.png" width="400px" height="600px"></div>
 
 ## Purpose:
 
