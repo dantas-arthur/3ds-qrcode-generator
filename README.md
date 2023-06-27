@@ -5,6 +5,12 @@
   <img src="./assets/icone-grande.png" alt="icone-grande">
 </div>
 
+<h2 align="center">ℹ️ IMPORTANT ℹ️</h2>
+
+<p align="center">
+  This project has the sole purpose of helping the Nintendo 3DS community and assisting me in the learning process of new programming languages. I do not endorse piracy in any way. When using any resources provided in this repository, make sure to <strong>dump</strong> a copy of your original game.
+</p>
+
 ## Purpose:
 
 The purpose of this repository is to make the process of installing games on the Nintendo 3DS a bit easier. As you may already know, when we install a game by moving files to the internal storage of the 3DS, it costs twice the internal memory (the space consumed by the ```.cia``` file and the space needed to install the game). Even if you select the option to delete the ```.cia``` file after installation, personally speaking, it is quite inconvenient to have to delete a file that I would like to keep. Considering these issues, I decided to create a simple script that generates a QR code so that I can install a game in a much more convenient way. "But why use Google Drive?" Simply to keep the files secure in a cloud service, and I can also save the memory of my devices.
