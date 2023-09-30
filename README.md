@@ -22,7 +22,7 @@ The purpose of this repository is to make the process of installing games on the
 ## How to use:
 
 #### Download the .exe file
-You can download the exe file clicking [here](https://github.com/LonelyALpHaz/3ds-qrcode-generator/releases).
+You can download the .exe file clicking [here](https://github.com/LonelyALpHaz/3ds-qrcode-generator/releases).
 
 or...
 
