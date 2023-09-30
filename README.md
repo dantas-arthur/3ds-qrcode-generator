@@ -46,7 +46,7 @@ git clone https://github.com/LonelyALpHaz/3ds-qrcode-generator.git
 
 ## Resources used:
 
-This project utilized the ```Python``` programming language, version 3.11.1, the ```pypng``` and ```pyqrcode``` modules were used to generate the QR code, and the ```Tkinter``` module was used to create the graphical interface.
+This project utilized the ```Python``` programming language, version 3.11.1, the ```pypng``` and ```pyqrcode``` modules were used to generate the QR code, the ```Tkinter``` module was used to create the graphical interface and the ```auto-py-to-exe``` to generate a .exe file.
 
 ## Disclaimer:
 
