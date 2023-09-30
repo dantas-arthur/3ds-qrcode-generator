@@ -21,6 +21,11 @@ The purpose of this repository is to make the process of installing games on the
 
 ## How to use:
 
+#### Download the .exe file
+You can download the .exe file clicking [here](https://github.com/LonelyALpHaz/3ds-qrcode-generator/releases).
+
+or...
+
 #### Cloning the repository
 Before we begin, clone the repository to have local access to all the necessary files. You can do this using the following command:
 
@@ -41,7 +46,7 @@ git clone https://github.com/LonelyALpHaz/3ds-qrcode-generator.git
 
 ## Resources used:
 
-This project utilized the ```Python``` programming language, version 3.11.1, the ```pypng``` and ```pyqrcode``` modules were used to generate the QR code, and the ```Tkinter``` module was used to create the graphical interface.
+This project utilized the ```Python``` programming language, version 3.11.1, the ```pypng``` and ```pyqrcode``` modules were used to generate the QR code, the ```Tkinter``` module was used to create the graphical interface and the ```auto-py-to-exe``` to generate a .exe file.
 
 ## Disclaimer:
 
