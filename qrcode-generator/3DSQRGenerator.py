@@ -13,8 +13,9 @@ def qr_generator():
     label_qrcode.config(image='')
     
     # URL Check
-    
-    if txtinput.get() == '' or 'https://drive.google.com' not in txtinput.get():
+    if txtinput.get() == '':
+        label_qrcode.config(text='Use a valid URL!', fg='red')
+    elif not (txtinput.get().startswith('https://drive.google.com') or txtinput.get().startswith('https://archive.org')):
         label_qrcode.config(text='Use a valid URL!', fg='red')
 
     else:
@@ -25,9 +26,11 @@ def qr_generator():
             os.unlink(filename)
 
         # URL FILE
-
-        url = txtinput.get()[32:-18]
-        final_url = f'https://docs.google.com/uc?export=download&id={url}'
+        if 'https://drive.google.com' in txtinput.get():
+            url = txtinput.get()[32:-18]
+            final_url = f'https://docs.google.com/uc?export=download&id={url}'
+        else:
+            final_url = txtinput.get()
 
         # MAKING A QR CODE:
 
@@ -52,7 +55,7 @@ root = tk.Tk()
 root.title('3DS QR Generator')
 root.eval('tk::PlaceWindow . center')
 
-frame1 = tk.Frame(root, width=500, height=630, bg='#0e6475')
+frame1 = tk.Frame(root, width=500, height=680, bg='#0e6475')
 frame1.grid(row=0, column=0)
 frame1.pack_propagate(False)
 
