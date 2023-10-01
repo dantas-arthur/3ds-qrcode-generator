@@ -17,7 +17,7 @@
 
 ## Purpose:
 
-The purpose of this repository is to make the process of installing games on the Nintendo 3DS a bit easier. As you may already know, when we install a game by moving files to the internal storage of the 3DS, it costs twice the internal memory (the space consumed by the ```.cia``` file and the space needed to install the game). Even if you select the option to delete the ```.cia``` file after installation, personally speaking, it is quite inconvenient to have to delete a file that I would like to keep. Considering these issues, I decided to create a simple script that generates a QR code so that I can install a game in a much more convenient way. "But why use Google Drive?" Simply to keep the files secure in a cloud service, and I can also save the memory of my devices.
+The purpose of this repository is to make the process of installing games on the Nintendo 3DS a bit easier. As you may already know, when we install a game by moving files to the internal storage of the 3DS, it costs twice the internal memory (the space consumed by the ```.cia``` file and the space needed to install the game). Even if you select the option to delete the ```.cia``` file after installation, personally speaking, it is quite inconvenient to have to delete a file that I would like to keep. Considering these issues, I decided to create a simple script that generates a QR code so that I can install a game in a much more convenient way. "But why use Google Drive and Internet Archive?" Simply to keep the files secure in a cloud service, and I can also save the memory of my devices.
 
 ## How to use:
 
@@ -33,10 +33,18 @@ Before we begin, clone the repository to have local access to all the necessary 
 git clone https://github.com/LonelyALpHaz/3ds-qrcode-generator.git
 ```
 
-#### Generating the QR code
+#### Uploading the archive
+##### Google Drive
 1. Upload the game you want to install to [Google Drive](https://www.google.com/intl/pt-br/drive/about.html), make sure to **dump** original games in this process and use only games in the ```.cia``` format, otherwise FBI won't be able to install the game.
 2. Make the file accessible to the public by going to ```Share > Anyone with the link``` and copy the file link.
-3. Run the ```qr_code.py``` script available in this repository, paste the copied link into the "URL" field, and then click the "Generate" button. Wait a few seconds and the QR code will appear in the program interface.
+
+##### Internet Archive
+1. Upload the game you want to install to [Internet Archive](https://archive.org/), make sure to **dump** original games in this process and use only games in the ```.cia``` format, otherwise FBI won't be able to install the game.
+2. On the file page, navigate to the file tab ```Download Options > Show All``` and copy the direct download link that ends with ```.cia```.
+
+#### Generating the QR code
+1. Run the ```3DSQRGenerator.py``` script available in this repository, paste the copied link into the "URL" field, and then click the "Generate" button. Wait a few seconds and the QR code will appear in the program interface.
+2. If you downloaded the ```.exe``` file, then double click on the archive, paste the copied link into the "URL" field, and then click the "Generate" button. Wait a few seconds and the QR code will appear in the program interface.
 
 #### Installing the game on the 3DS
 1. Open the FBI application on your Nintendo 3DS, and on the first screen, select the options ```Remote Install > Scan QR Code```.
