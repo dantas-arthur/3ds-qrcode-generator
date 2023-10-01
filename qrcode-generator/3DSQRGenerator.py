@@ -25,10 +25,11 @@ def qr_generator():
         for filename in old_files:
             os.unlink(filename)
 
-        # URL FILE
+        # DRIVE URL FILE
         if 'https://drive.google.com' in txtinput.get():
             url = txtinput.get()[32:-18]
             final_url = f'https://docs.google.com/uc?export=download&id={url}'
+        # INTERNET ARCHIVE FILE
         else:
             final_url = txtinput.get()
 
