@@ -13,18 +13,16 @@ def qr_generator():
     label_qrcode.config(image='')
     
     # URL Check
+
     if txtinput.get() == '':
         label_qrcode.config(text='Use a valid URL!', fg='red')
     elif not (txtinput.get().startswith('https://drive.google.com') or txtinput.get().startswith('https://archive.org')):
         label_qrcode.config(text='Use a valid URL!', fg='red')
-
     else:
         # DELETING OLD QR CODES
-
         old_files = glob.glob('*.png')
         for filename in old_files:
             os.unlink(filename)
-
         # DRIVE URL FILE
         if 'https://drive.google.com' in txtinput.get():
             url = txtinput.get()[32:-18]
@@ -32,7 +30,7 @@ def qr_generator():
         # INTERNET ARCHIVE FILE
         else:
             final_url = txtinput.get()
-
+            
         # MAKING A QR CODE:
 
         qrcode_maker = pqr.create(f'{final_url}')
@@ -73,7 +71,11 @@ tk.Label(
 
 # Logo Image
 
-logo_img = ImageTk.PhotoImage(Image.open(r'C:\Users\baixa\OneDrive\Documents\MeusProjetos\3ds-qrcode-generator\assets\icone-pequeno.png'))
+absolute_path = os.path.dirname(__file__)
+relative_path = '../assets/icone-pequeno.png'
+image_path = os.path.join(absolute_path, relative_path)
+
+logo_img = ImageTk.PhotoImage(Image.open(image_path))
 logo_widget = tk.Label(frame1, image=logo_img, bg='#0e6475')
 logo_widget.pack()
 
