@@ -54,18 +54,17 @@ root = tk.Tk()
 root.title('3DS QR Generator')
 root.eval('tk::PlaceWindow . center')
 
-frame1 = tk.Frame(root, width=500, height=680, bg='#0e6475')
+frame1 = tk.Frame(root, width=500, height=680, bg='#151716')
 frame1.grid(row=0, column=0)
 frame1.pack_propagate(False)
 
 # Title Label
-
 tk.Label(
     frame1, 
-    text='3DS QR Code Generator',
-    bg='#0e6475',
+    text='3DS QR Generator',
+    bg='#151716',
     fg='white',
-    font=('Microsoft Sans Serif', 20),
+    font=('Segoe UI Black', 20),
     pady=15
 ).pack()
 
@@ -76,7 +75,7 @@ relative_path = '../assets/icone-pequeno.png'
 image_path = os.path.join(absolute_path, relative_path)
 
 logo_img = ImageTk.PhotoImage(Image.open(image_path))
-logo_widget = tk.Label(frame1, image=logo_img, bg='#0e6475')
+logo_widget = tk.Label(frame1, image=logo_img, bg='#151716')
 logo_widget.pack()
 
 # Text Input URL
@@ -86,12 +85,12 @@ txtinput.pack()
 
 # QR Code Display Frame
 
-qrcode_frame = tk.Frame(frame1, bg='#0e6475', pady=10)
+qrcode_frame = tk.Frame(frame1, bg='#151716', pady=10)
 qrcode_frame.pack()
 
 # QR Code Display Image
 
-label_qrcode = tk.Label(qrcode_frame, bg='#0e6475', font=('Default', 12))
+label_qrcode = tk.Label(qrcode_frame, bg='#151716', font=('Default', 12))
 label_qrcode.pack()
 
 # Generate QR Button
@@ -101,10 +100,10 @@ button_frame.pack(side=tk.BOTTOM, pady=5)
 
 generate_button = tk.Button(
     button_frame,
-    text='Generate',
+    text='Create QR',
     font=('TkHeadingFont', 20),
-    bg='#0e6475',
-    fg='white',
+    bg='white',
+    fg='#151716',
     width=10,
     pady=10,
     cursor='hand2',
