@@ -1,4 +1,5 @@
 import tkinter as tk
+import customtkinter
 from PIL import ImageTk, Image
 import pyqrcode as pqr
 import glob
