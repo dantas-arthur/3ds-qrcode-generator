@@ -43,7 +43,7 @@ git clone https://github.com/LonelyALpHaz/3ds-qrcode-generator.git
 2. On the file page, navigate to the file tab ```Download Options > Show All``` and copy the direct download link that ends with ```.cia```.
 
 #### Generating the QR code
-1. Run the ```3DSQRGenerator.py``` script available in this repository, paste the copied link into the "URL" field, and then click the "Create QR" button. Wait a few seconds and the QR code will appear in the program interface.
+1. Run the ```qr_generator.py``` script available in this repository, paste the copied link into the "URL" field, and then click the "Create QR" button. Wait a few seconds and the QR code will appear in the program interface.
 2. If you downloaded the ```.exe``` file, then double click on the archive, paste the copied link into the "URL" field, and then click the "Create QR" button. Wait a few seconds and the QR code will appear in the program interface.
 
 #### Installing the game on the 3DS
@@ -54,7 +54,7 @@ git clone https://github.com/LonelyALpHaz/3ds-qrcode-generator.git
 
 ## Resources used:
 
-This project utilized the ```Python``` programming language, version 3.11.1, the ```pypng``` and ```pyqrcode``` modules were used to generate the QR code, the ```Tkinter``` module was used to create the graphical interface and the ```auto-py-to-exe``` to generate a .exe file.
+This project utilized the ```Python``` programming language, version 3.11.1, the ```pypng``` and ```pyqrcode``` modules were used to generate the QR code, the ```CustomTkinter``` module was used to create the graphical interface and the ```auto-py-to-exe``` to generate a .exe file.
 
 ## Disclaimer:
 
