@@ -1,6 +1,6 @@
 import tkinter
 import customtkinter
-from PIL import ImageTk, Image
+from PIL import Image
 import pyqrcode as pqr
 import glob
 import png
@@ -10,14 +10,15 @@ import io
 
 def qr_generator():
 
-    errormsg.configure(text="")  # Remove old QR codes
-
-    print(textbox.get("0.0", "end"))
+    qrlabel.configure(text="")  # Remove old QR codes
+    qrlabel.pack()
 
     if textbox.get("0.0", "end") == "":  # URL checker
-        errormsg.configure(text="Use a valid URL!", fg_color="red")
+        qrlabel.configure(text="Use a valid URL!", text_color="red")
+        qrlabel.pack()
     elif not (textbox.get("0.0", "end").startswith("https://drive.google.com") or textbox.get("0.0", "end").startswith("https://archive.org")):
-        errormsg.configure(text="Use a valid URL!", fg_color="red")
+        qrlabel.configure(text="Use a valid URL!", text_color="red")
+        qrlabel.pack()
     else:
         old_files = glob.glob("*.png")  # Deleting old QR codes
         for filename in old_files:
@@ -47,7 +48,7 @@ root = customtkinter.CTk() # CustomTK Window
 
 root.title("3DS QR Codes")
 root.iconbitmap("assets/icon.ico")
-root.geometry("500x650")
+root.geometry("500x600")
 root.resizable(width=False, height=False)
 
 appTitle = customtkinter.CTkLabel(
@@ -70,10 +71,11 @@ textbox = customtkinter.CTkTextbox(frame, width=350, height=20)
 textbox.pack(pady=25)
 paste = customtkinter.CTkButton(
     frame, 
-    text="Paste", 
+    text="Create", 
     width=65, 
     height=30, 
-    fg_color="#208097"
+    fg_color="#208097",
+    command=qr_generator
     )
 textbox.grid(row=0, column=0)
 paste.grid(row=0, column=1, padx=10)
@@ -84,15 +86,7 @@ qrframe = customtkinter.CTkFrame(root, width=250, height=250)
 qrlabel = customtkinter.CTkLabel(qrframe, text="", image="")
 qrframe.pack(pady=25)
 
-button = customtkinter.CTkButton(
-    root, 
-    text="Start", 
-    font=("TkHeadingFont", 35), 
-    width=180, height=75, 
-    corner_radius=5, 
-    fg_color="#208097",
-    command=qr_generator
-    )
-button.place(relx=0.5, rely=0.92, anchor=tkinter.CENTER)
+
+save = customtkinter.CTkEntry
 
 root.mainloop()
