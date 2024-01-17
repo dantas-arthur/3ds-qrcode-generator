@@ -46,7 +46,7 @@ def qr_generator():
 
 root = customtkinter.CTk() # CustomTK Window
 
-root.title("3DS QR Codes")
+root.title("3DS QR Code")
 root.iconbitmap("assets/icon.ico")
 root.geometry("500x600")
 root.resizable(width=False, height=False)
