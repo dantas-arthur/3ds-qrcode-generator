@@ -1,6 +1,7 @@
 import tkinter
 import customtkinter
 from PIL import Image
+from pathlib import Path
 import pyqrcode as pqr
 import glob
 import png
@@ -48,10 +49,11 @@ def qr_generator():
 root = customtkinter.CTk() # CustomTK Window
 
 root.title("3DS QR Code")
-icon_absolute_path = os.path.dirname(__file__)
-icon_relative_path = r"../assets/icon.ico"
+icon_absolute_path = os.path.abspath(os.path.dirname(__file__))
+icon_relative_path = Path("../assets/icon.ico")
 icon_image_path = os.path.join(icon_absolute_path, icon_relative_path)
 root.iconbitmap(icon_image_path)
+
 root.geometry("500x600")
 root.resizable(width=False, height=False)
 
@@ -63,8 +65,8 @@ appTitle = customtkinter.CTkLabel(
     )
 appTitle.pack(pady=5)
 
-logo_absolute_path = os.path.dirname(__file__)
-logo_relative_path = r"../assets/icone-grande.png"
+logo_absolute_path = os.path.abspath(os.path.dirname(__file__))
+logo_relative_path = Path("../assets/icone-grande.png")
 logo_image_path = os.path.join(logo_absolute_path, logo_relative_path)
 image = customtkinter.CTkImage(light_image=Image.open(os.path.join(logo_image_path)), size=(150, 150))
 label = customtkinter.CTkLabel(root, text="", image=image)
