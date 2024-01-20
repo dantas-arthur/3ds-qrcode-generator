@@ -10,6 +10,7 @@ import io
 
 def qr_generator():
 
+
     qrlabel.configure(text="")  # Remove old QR codes
     qrlabel.pack()
 
@@ -26,7 +27,7 @@ def qr_generator():
 
         if "https://drive.google.com" in textbox.get("0.0", "end"):
             url = textbox.get("0.0", "end")[32:-18]
-            edited_url = f"https://docs.google.com/uc?export=download&id={url}"
+            edited_url = f"https://drive.google.com/uc?export=download&id={url}"
         else:
             edited_url = textbox.get("0.0", "end")
 
@@ -39,7 +40,7 @@ def qr_generator():
         buffer = io.BytesIO()
         qr_code.png(buffer)
 
-        qrc = customtkinter.CTkImage(light_image=Image.open("qrcode.png"), size=(250, 250))  # Display QR code
+        qrc = customtkinter.CTkImage(light_image=Image.open("qrcode.png"), size=(275, 275))  # Display QR code
         qrlabel.configure(qrframe, text="", image=qrc)
         qrlabel.pack()
 
@@ -47,7 +48,10 @@ def qr_generator():
 root = customtkinter.CTk() # CustomTK Window
 
 root.title("3DS QR Code")
-root.iconbitmap("assets/icon.ico")
+icon_absolute_path = os.path.dirname(__file__)
+icon_relative_path = r"../assets/icon.ico"
+icon_image_path = os.path.join(icon_absolute_path, icon_relative_path)
+root.iconbitmap(icon_image_path)
 root.geometry("500x600")
 root.resizable(width=False, height=False)
 
@@ -59,10 +63,10 @@ appTitle = customtkinter.CTkLabel(
     )
 appTitle.pack(pady=5)
 
-absolute_path = os.path.dirname(__file__)
-relative_path = '../assets/icone-grande.png'
-image_path = os.path.join(absolute_path, relative_path)
-image = customtkinter.CTkImage(light_image=Image.open(os.path.join(image_path)), size=(150, 150))
+logo_absolute_path = os.path.dirname(__file__)
+logo_relative_path = r"../assets/icone-grande.png"
+logo_image_path = os.path.join(logo_absolute_path, logo_relative_path)
+image = customtkinter.CTkImage(light_image=Image.open(os.path.join(logo_image_path)), size=(150, 150))
 label = customtkinter.CTkLabel(root, text="", image=image)
 label.pack(pady=10)
 
@@ -82,11 +86,8 @@ paste.grid(row=0, column=1, padx=10)
 frame.pack()
 
 errormsg = customtkinter.CTkLabel(root, text="") # Error mensage
-qrframe = customtkinter.CTkFrame(root, width=250, height=250)
+qrframe = customtkinter.CTkFrame(root, width=275, height=275)
 qrlabel = customtkinter.CTkLabel(qrframe, text="", image="")
 qrframe.pack(pady=25)
-
-
-save = customtkinter.CTkEntry
 
 root.mainloop()
