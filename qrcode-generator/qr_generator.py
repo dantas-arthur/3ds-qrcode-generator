@@ -5,12 +5,18 @@ from pathlib import Path
 import pyqrcode as pqr
 import glob
 import png
-import os
+import sys, os
 import io
 
+def resource_path(relative_path):
+    try:
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
+
+    return os.path.join(base_path, relative_path)
 
 def qr_generator():
-
 
     qrlabel.configure(text="")  # Remove old QR codes
     qrlabel.pack()
@@ -49,10 +55,6 @@ def qr_generator():
 root = customtkinter.CTk() # CustomTK Window
 
 root.title("3DS QR Code")
-icon_absolute_path = os.path.abspath(os.path.dirname(__file__))
-icon_relative_path = Path("../assets/icon.ico")
-icon_image_path = os.path.join(icon_absolute_path, icon_relative_path)
-root.iconbitmap(icon_image_path)
 
 root.geometry("500x600")
 root.resizable(width=False, height=False)
@@ -65,10 +67,7 @@ appTitle = customtkinter.CTkLabel(
     )
 appTitle.pack(pady=5)
 
-logo_absolute_path = os.path.abspath(os.path.dirname(__file__))
-logo_relative_path = Path("../assets/icone-grande.png")
-logo_image_path = os.path.join(logo_absolute_path, logo_relative_path)
-image = customtkinter.CTkImage(light_image=Image.open(os.path.join(logo_image_path)), size=(150, 150))
+image = customtkinter.CTkImage(light_image=Image.open(resource_path("assets/icone-grande.png")), size=(150, 150))
 label = customtkinter.CTkLabel(root, text="", image=image)
 label.pack(pady=10)
 
