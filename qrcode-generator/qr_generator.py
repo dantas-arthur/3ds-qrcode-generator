@@ -8,6 +8,7 @@ import png
 import sys, os
 import io
 
+
 def resource_path(relative_path):
     try:
         base_path = sys._MEIPASS
@@ -15,6 +16,7 @@ def resource_path(relative_path):
         base_path = os.path.abspath(".")
 
     return os.path.join(base_path, relative_path)
+
 
 def qr_generator():
 
@@ -71,7 +73,7 @@ image = customtkinter.CTkImage(light_image=Image.open(resource_path("assets/icon
 label = customtkinter.CTkLabel(root, text="", image=image)
 label.pack(pady=10)
 
-frame = customtkinter.CTkFrame(root) # URL field
+frame = customtkinter.CTkFrame(root, fg_color="transparent") # URL field
 textbox = customtkinter.CTkTextbox(frame, width=350, height=20) 
 textbox.pack(pady=25)
 paste = customtkinter.CTkButton(
@@ -87,7 +89,7 @@ paste.grid(row=0, column=1, padx=10)
 frame.pack()
 
 errormsg = customtkinter.CTkLabel(root, text="") # Error mensage
-qrframe = customtkinter.CTkFrame(root, width=275, height=275)
+qrframe = customtkinter.CTkFrame(root, width=275, height=275, fg_color="transparent")
 qrlabel = customtkinter.CTkLabel(qrframe, text="", image="")
 qrframe.pack(pady=25)
 
