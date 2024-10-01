@@ -30,7 +30,7 @@ or...
 Before we begin, clone the repository to have local access to all the necessary files. You can do this using the following command:
 
 ```
-git clone https://github.com/LonelyALpHaz/3ds-qrcode-generator.git
+git clone https://github.com/dantas-arthur/3ds-qrcode-generator.git
 ```
 
 #### Uploading the archive
